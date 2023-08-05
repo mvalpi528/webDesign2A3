@@ -217,6 +217,10 @@ nav li a:hover {
   width: 500px;
 }
 
+.spot-type:hover {
+  transform: scale(1.02);
+}
+
 #reef {
   position: relative;
   background-image: url("/images/ocean/reef.jpg");
@@ -243,4 +247,16 @@ nav li a:hover {
   color: white;
   top: 60%;
   right: 10%;
+}
+
+/* --------------------------------------- */
+
+/* Manouvers */
+
+#manoeuvres {
+  text-align: center;
+}
+
+#manoeuvres-grid-container {
+  display: grid;
 }
