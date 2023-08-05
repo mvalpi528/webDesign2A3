@@ -178,8 +178,14 @@ nav li a:hover {
 
 /* Equipment */
 
+#equipment {
+  text-align: center;
+}
+
 #equipment-content-container {
   height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
@@ -189,4 +195,52 @@ nav li a:hover {
   margin: 20px;
   border: solid var(--text-color) 1px;
   border-radius: 10px;
+}
+
+/* --------------------------------------- */
+
+/* Ocean */
+
+#ocean {
+  text-align: center;
+}
+
+#spot-types-container {
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.spot-type {
+  height: 500px;
+  width: 500px;
+}
+
+#reef {
+  position: relative;
+  background-image: url("/images/ocean/reef.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#point {
+  position: relative;
+  background-image: url("/images/ocean/point.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#beachbreak {
+  position: relative;
+  background-image: url("/images/ocean/beachbreak.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.spot-type-title {
+  position: absolute;
+  color: white;
+  top: 60%;
+  right: 10%;
 }
