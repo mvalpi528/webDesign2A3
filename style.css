@@ -73,6 +73,10 @@ h2 {
   font-size: 6rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 body {
   font-family: "Koulen", cursive;
   font-family: "Montserrat", sans-serif;
@@ -147,18 +151,42 @@ nav li a:hover {
 
 /* About Us */
 
-#about-us {
+#about-us-content-container {
   display: flex;
   justify-content: space-around;
 }
 
-#about-us div {
-  border: 1px solid black;
+#about-us-content-container div {
   height: 50%;
   width: 50%;
   margin: 10px;
+  border: solid 1px black;
 }
 
-#about-us div p {
+#about-us-content-container div p {
   margin: 20px;
+}
+
+#about-us-image {
+  position: relative;
+  background-image: url("../images/two-men-in-water.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* --------------------------------------- */
+
+/* Equipment */
+
+#equipment-content-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.equipment-content-card {
+  height: 80%;
+  margin: 20px;
+  border: solid var(--text-color) 1px;
+  border-radius: 10px;
 }
