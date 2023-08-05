@@ -1,0 +1,164 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/#top-of-site */
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* --------------------------------------- */
+
+/* Global Styling */
+
+:root {
+  /* Setting custom properties for all the colours used in the project */
+  --primary-color: #fffefe;
+  --secondary-color: #b1d4e0;
+  --tertiary-color: #145da0;
+  --text-color: #2d3433;
+
+  /* Setting custom properties for all the fonts used in the project */
+  --hero-font: "Amatic SC";
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Bebas";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  padding-top: 65px;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+body {
+  font-family: "Koulen", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* --------------------------------------- */
+
+/* Header */
+
+header {
+  border: solid black;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-start;
+  justify-content: space-between;
+  padding: 0px 2 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid black;
+  width: 90%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav li a {
+  font-size: 26px;
+  font-weight: 600;
+  transition: 1s ease;
+  color: var(--text-color);
+}
+
+nav li a:hover {
+  color: var(--tertiary-color);
+}
+
+/* --------------------------------------- */
+
+/* Hero */
+
+#hero-image {
+  height: 70%;
+  position: relative;
+  background-image: url("../images/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-text {
+  position: absolute;
+  color: white;
+  top: 60%;
+  right: 10%;
+}
+
+/* --------------------------------------- */
+
+/* About Us */
+
+#about-us {
+  display: flex;
+  justify-content: space-around;
+}
+
+#about-us div {
+  border: 1px solid black;
+  height: 50%;
+  width: 50%;
+  margin: 10px;
+}
+
+#about-us div p {
+  margin: 20px;
+}
