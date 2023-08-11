@@ -72,8 +72,10 @@ textarea {
   --primary-color: #fffefe;
   --secondary-color: #b1d4e0;
   --tertiary-color: #145da0;
-  --text-color: #2d3433;
-  --hero-colour: #ffac47;
+  --text-color: #242726;
+  --hero-colour: #ffd5a2;
+  --contrast-saturated: #ff991d;
+  --contrast-desaturated: #fffcf9;
 
   /* Setting custom properties for all the fonts used in the project */
   --hero-font: "kabel-black";
@@ -93,7 +95,7 @@ html {
 
 section {
   height: 100vh;
-  padding-top: 65px;
+  padding-top: 100px;
 }
 
 h1 {
@@ -120,7 +122,7 @@ h3 {
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--contrast-desaturated);
   font-family: var(--secondary-font);
 }
 
@@ -156,7 +158,7 @@ nav {
 }
 
 #nav-buttons {
-  width: 20%;
+  width: 30%;
 }
 
 #login-button,
@@ -165,7 +167,7 @@ nav {
   border-radius: 10px;
   background-color: var(--tertiary-color);
   color: var(--primary-color);
-  font-family: var(--hero-font);
+  font-family: var(--heading-font);
   font-size: var(--small);
 }
 
@@ -181,7 +183,7 @@ nav ul {
 }
 
 nav li a {
-  font-family: var(--heading-font);
+  font-family: var(--hero-font);
   font-size: var(--small);
   font-weight: 600;
   transition: 1s ease;
@@ -219,27 +221,39 @@ nav li a:hover {
 
 /* About Us */
 
+#about-us {
+  text-align: center;
+}
+
+#about-us h2 {
+  color: var(--text-color);
+}
+
 #about-us-content-container {
   display: flex;
   justify-content: space-around;
+  border: solid 1px black;
+  max-width: 1200px;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 #about-us-content-container div {
   height: 50%;
   width: 50%;
   margin: 10px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
 }
 
 #about-us-content-container div p {
+  color: var(--text-color);
   margin: 20px;
+  text-align: left;
 }
 
-#about-us-image {
-  position: relative;
-  background-image: url("../images/two-men-in-water.jpg");
-  background-position: center;
-  background-size: cover;
+#about-us-image img {
+  border-radius: 3px;
+  max-width: 500px;
 }
 
 /* --------------------------------------- */
