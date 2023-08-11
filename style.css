@@ -61,20 +61,27 @@ textarea {
   src: url("../fonts/Generation-Mono.otf");
 }
 
+@font-face {
+  font-family: "kabel-black";
+  /* Jumps back to index via ../ */
+  src: url("../fonts/kabel-black.otf");
+}
+
 :root {
   /* Setting custom properties for all the colours used in the project */
   --primary-color: #fffefe;
   --secondary-color: #b1d4e0;
   --tertiary-color: #145da0;
   --text-color: #2d3433;
+  --hero-colour: #ffac47;
 
   /* Setting custom properties for all the fonts used in the project */
-  --hero-font: "Generation-Mono";
+  --hero-font: "kabel-black";
   --heading-font: "Bebas";
   --primary-font: "Koulen", cursive;
   --secondary-font: "Montserrat", sans-serif;
 
-  --largest: 10rem;
+  --largest: 12rem;
   --large: 6rem;
   --medium: 4rem;
   --small: 2rem;
@@ -91,7 +98,7 @@ section {
 
 h1 {
   font-family: var(--hero-font);
-  color: var(--text-color);
+  color: var(--hero-colour);
 }
 
 h2,
@@ -114,6 +121,7 @@ h3 {
 
 body {
   background-color: var(--primary-color);
+  font-family: var(--secondary-font);
 }
 
 /* --------------------------------------- */
@@ -121,7 +129,6 @@ body {
 /* Header */
 
 header {
-  border: solid black;
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -140,9 +147,31 @@ header {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  border: solid black;
+  justify-content: space-between;
   width: 90%;
+}
+
+#nav-links {
+  width: 70%;
+}
+
+#nav-buttons {
+  width: 20%;
+}
+
+#login-button,
+#signup-button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  font-family: var(--hero-font);
+  font-size: var(--small);
+}
+
+#login-button:hover,
+#signup-button:hover {
+  background-color: var(--primary-color);
 }
 
 nav ul {
@@ -160,15 +189,20 @@ nav li a {
 }
 
 nav li a:hover {
-  color: var(--tertiary-color);
+  color: var(--hero-colour);
 }
 
 /* --------------------------------------- */
 
 /* Hero */
 
+#hero {
+  /* overriding general section padding */
+  padding: 0;
+}
+
 #hero-image {
-  height: 70%;
+  height: 100%;
   position: relative;
   background-image: url("../images/hero.jpg");
   background-position: center;
@@ -177,7 +211,7 @@ nav li a:hover {
 
 .hero-text {
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 10%;
 }
 
