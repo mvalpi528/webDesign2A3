@@ -94,7 +94,7 @@ html {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 100px;
 }
 
@@ -201,6 +201,9 @@ nav li a:hover {
 #hero {
   /* overriding general section padding */
   padding: 0;
+  display: block;
+  /* needs a height for the background image to display */
+  height: 100vh;
 }
 
 #hero-image {
@@ -339,6 +342,89 @@ nav li a:hover {
   color: white;
   top: 60%;
   right: 10%;
+}
+
+/* --------------------------------------- */
+
+/* Destinations */
+
+#destinations {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.container .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container .image-container .image {
+  height: 250px;
+  width: 350px;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .image-container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s linear;
+}
+
+.container .image-container .image img:hover {
+  transform: scale(1.1);
+}
+
+.container .popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.container .popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.container .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+
+/* Reconsider this media query */
+@media (max-width: 768px) {
+  .container .popup-image img {
+    width: 95%;
+  }
 }
 
 /* --------------------------------------- */
