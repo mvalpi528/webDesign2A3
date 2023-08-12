@@ -282,10 +282,31 @@ sl-progress-bar {
 }
 
 .equipment-content-card {
-  height: 80%;
+  position: relative;
+  height: 600px;
+  width: 400px;
   margin: 20px;
-  border: solid var(--text-color) 1px;
+  border: solid lightgrey 1px;
   border-radius: 10px;
+}
+
+.equipment-content-card img {
+  position: absolute;
+  height: 400px;
+  left: 0;
+  bottom: 65px;
+  width: 100%;
+}
+
+.learn-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.learn-more:hover {
+  cursor: pointer;
 }
 
 /* --------------------------------------- */

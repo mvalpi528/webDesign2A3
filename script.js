@@ -43,3 +43,36 @@ function createImagePopUp(imageCollection) {
 }
 
 createImagePopUp(galleryImages);
+
+// Surfboard Dialogs ---
+
+// Shortboard
+
+const shortboardDialog = document.querySelector("#shortboard-dialog");
+const shortboardOpenButton = document.querySelector("#shortboard-learn-more");
+const shortboardCloseButton = shortboardDialog.querySelector(
+  'sl-button[slot="footer"]'
+);
+
+shortboardOpenButton.addEventListener("click", () => shortboardDialog.show());
+shortboardCloseButton.addEventListener("click", () => shortboardDialog.hide());
+
+// Fish
+
+const fishDialog = document.querySelector("#fish-dialog");
+const fishOpenButton = document.querySelector("#fish-learn-more");
+const fishCloseButton = fishDialog.querySelector('sl-button[slot="footer"]');
+
+fishOpenButton.addEventListener("click", () => fishDialog.show());
+fishCloseButton.addEventListener("click", () => fishDialog.hide());
+
+// Midlength
+
+const midlengthDialog = document.querySelector("#midlength-dialog");
+const midlengthOpenButton = document.querySelector("#midlength-learn-more");
+const midlengthCloseButton = midlengthDialog.querySelector(
+  'sl-button[slot="footer"]'
+);
+
+midlengthOpenButton.addEventListener("click", () => midlengthDialog.show());
+midlengthCloseButton.addEventListener("click", () => midlengthDialog.hide());

@@ -82,43 +82,55 @@
         <h2>The Surfer's Quiver</h2>
         <div id="equipment-content-container">
           <div class="equipment-content-card">
-            <h3>Placeholder</h3>
+            <h3>Shortboard</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-              voluptatem omnis perferendis magnam. Perspiciatis cum maxime
-              obcaecati ex sunt expedita facere suscipit porro aliquid!
-              Accusamus aliquam labore repudiandae cupiditate reiciendis?
+              Short boards are high-performance surfboards, designed to make
+              sharp turns
             </p>
             <img
               src="images/equipment/shortboard.webp"
               alt="a high performace surfboard"
             />
+            <sl-button id="shortboard-learn-more" class="learn-more"
+              >Learn More</sl-button
+            >
           </div>
 
+          <sl-dialog label="The Shortboard" id="shortboard-dialog">
+            More information about shortboards
+            <sl-button slot="footer" variant="primary">Close</sl-button>
+          </sl-dialog>
+
           <div class="equipment-content-card">
-            <h3>Placeholder</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-              voluptatem omnis perferendis magnam. Perspiciatis cum maxime
-              obcaecati ex sunt expedita facere suscipit porro aliquid!
-              Accusamus aliquam labore repudiandae cupiditate reiciendis?
-            </p>
+            <h3>Fish</h3>
+            <p>Fish surfboards have more volume etc</p>
             <img src="images/equipment/fish.webp" alt="a fish surfboard" />
+            <sl-button id="fish-learn-more" class="learn-more"
+              >Learn More</sl-button
+            >
           </div>
 
+          <sl-dialog label="The Fish" id="fish-dialog">
+            Some additional information about the Fish surfboard
+            <sl-button slot="footer" variant="primary">Close</sl-button>
+          </sl-dialog>
+
           <div class="equipment-content-card">
-            <h3>Placeholder</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-              voluptatem omnis perferendis magnam. Perspiciatis cum maxime
-              obcaecati ex sunt expedita facere suscipit porro aliquid!
-              Accusamus aliquam labore repudiandae cupiditate reiciendis?
-            </p>
+            <h3>Midlength</h3>
+            <p>Midlengths are big ect</p>
             <img
               src="images/equipment/midlength.jpeg"
               alt="a midlength surfboard"
             />
+            <sl-button id="midlength-learn-more" class="learn-more"
+              >Learn More</sl-button
+            >
           </div>
+
+          <sl-dialog label="The Midlength" id="midlength-dialog">
+            Some more information about midlengths
+            <sl-button slot="footer" variant="primary">Close</sl-button>
+          </sl-dialog>
         </div>
       </section>
       <section id="board-calculator">
@@ -162,6 +174,8 @@
       </section>
       <section id="destinations">
         <h2>destinations</h2>
+        <p>surfing can take you all over the world</p>
+        <p>explore some of the most popular destinations</p>
         <div class="section-container">
           <div class="img-container">
             <div class="image">
@@ -221,6 +235,26 @@
       </section>
       <section id="manoeuvres">
         <h2>Manoeuvres</h2>
+        <sl-tab-group placement="start">
+          <sl-tab slot="nav" panel="general">General</sl-tab>
+          <sl-tab slot="nav" panel="custom">Custom</sl-tab>
+          <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
+          <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
+
+          <sl-tab-panel name="general"
+            >This is the general tab panel.</sl-tab-panel
+          >
+          <sl-tab-panel name="custom"
+            >This is the custom tab panel.</sl-tab-panel
+          >
+          <sl-tab-panel name="advanced"
+            >This is the advanced tab panel.</sl-tab-panel
+          >
+          <sl-tab-panel name="disabled"
+            >This is a disabled tab panel.</sl-tab-panel
+          >
+        </sl-tab-group>
+
         <div id="manoeuvres-grid-container">
           <div class="manoeuvres-grid-item"></div>
           <div class="manoeuvres-grid-item"></div>
