@@ -22,28 +22,6 @@ document.addEventListener("scroll", () => {
   progressBar.value = scrollProgress;
 });
 
-// image popups ------
-
-// Store all gallery images in a variable
-// Selects all images that are contained within elements that have the class "image-container"
-const galleryImages = document.querySelectorAll(".img-container img");
-
-function createImagePopUp(imageCollection) {
-  imageCollection.forEach((image) => {
-    image.onclick = () => {
-      document.querySelector(".popup-image").style.display = "block";
-      document.querySelector(".popup-image img").src =
-        image.getAttribute("src");
-    };
-  });
-
-  document.querySelector(".popup-image span").onclick = () => {
-    document.querySelector(".popup-image").style.display = "none";
-  };
-}
-
-createImagePopUp(galleryImages);
-
 // Surfboard Dialogs ---
 
 // Shortboard
@@ -76,3 +54,38 @@ const midlengthCloseButton = midlengthDialog.querySelector(
 
 midlengthOpenButton.addEventListener("click", () => midlengthDialog.show());
 midlengthCloseButton.addEventListener("click", () => midlengthDialog.hide());
+
+// Surfboard Calculator
+
+const calculateButton = document.getElementById("choose-board-button");
+
+function calculateBoardType() {
+  const userHeight = document.querySelector("#user-height").value;
+  console.log(userHeight);
+}
+
+calculateButton.addEventListener("click", () => {
+  calculateBoardType();
+});
+
+// Gallery Images -- image popups ------
+
+// Store all gallery images in a variable
+// Selects all images that are contained within elements that have the class "image-container"
+const galleryImages = document.querySelectorAll(".img-container img");
+
+function createImagePopUp(imageCollection) {
+  imageCollection.forEach((image) => {
+    image.onclick = () => {
+      document.querySelector(".popup-image").style.display = "block";
+      document.querySelector(".popup-image img").src =
+        image.getAttribute("src");
+    };
+  });
+
+  document.querySelector(".popup-image span").onclick = () => {
+    document.querySelector(".popup-image").style.display = "none";
+  };
+}
+
+createImagePopUp(galleryImages);

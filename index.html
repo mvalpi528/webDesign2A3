@@ -135,13 +135,52 @@
       </section>
       <section id="board-calculator">
         <h2>Which board is right for you?</h2>
-        <div id="board-calculator-container">
-          <p>Do you love sharp turns?</p>
-          <sl-switch checked>Checked</sl-switch>
-          <sl-switch checked>Checked</sl-switch>
-          <sl-switch checked>Checked</sl-switch>
+        <div id="board-calculator-grid-container">
+          <div class="board-calculator-column">
+            <h3>About You</h3>
 
-          <sl-button>Choose my board</sl-button>
+            <label for="user-height">What is your height in cm: </label>
+
+            <input type="number" id="user-height" min="0" max="250" required />
+
+            <label for="user-age">What is your age: </label>
+            <input type="number" id="user-age" min="5" max="125" required />
+
+            <label for="user-weight">What is your weight in kgs: </label>
+            <input type="number" id="user-weight" min="0" max="500" required />
+
+            <label for="user-years-surfing"
+              >Years of surfing experience:
+            </label>
+            <input
+              type="range"
+              id="user-years-surfing"
+              min="0"
+              max="10"
+              required
+            />
+            <label for="user-surf-frequency">Number of surfs per week: </label>
+            <input
+              type="range"
+              id="user-surf-frequency"
+              min="0"
+              max="500"
+              required
+            />
+          </div>
+          <div class="board-calculator-column">
+            <h3>Preferences</h3>
+            <sl-switch>Do you love sharp turns?</sl-switch>
+            <sl-switch>Do you want to catch waves earlier?</sl-switch>
+            <sl-switch>Do you prefer to cruise down the line?</sl-switch>
+            <sl-switch></sl-switch>
+            <sl-switch></sl-switch>
+            <sl-switch></sl-switch>
+            <sl-button id="choose-board-button">Choose my board</sl-button>
+          </div>
+          <div class="board-calculator-column">
+            <h3>The Board</h3>
+          </div>
         </div>
       </section>
       <section id="ocean">
@@ -235,25 +274,28 @@
       </section>
       <section id="manoeuvres">
         <h2>Manoeuvres</h2>
-        <sl-tab-group placement="start">
-          <sl-tab slot="nav" panel="general">General</sl-tab>
-          <sl-tab slot="nav" panel="custom">Custom</sl-tab>
-          <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
-          <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
+        <!-- figure out why this dialog isnt working -->
+        <div id="sl-dialog-container">
+          <sl-tab-group>
+            <sl-tab slot="nav" panel="general">General</sl-tab>
+            <sl-tab slot="nav" panel="custom">Custom</sl-tab>
+            <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
+            <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
 
-          <sl-tab-panel name="general"
-            >This is the general tab panel.</sl-tab-panel
-          >
-          <sl-tab-panel name="custom"
-            >This is the custom tab panel.</sl-tab-panel
-          >
-          <sl-tab-panel name="advanced"
-            >This is the advanced tab panel.</sl-tab-panel
-          >
-          <sl-tab-panel name="disabled"
-            >This is a disabled tab panel.</sl-tab-panel
-          >
-        </sl-tab-group>
+            <sl-tab-panel name="general"
+              >This is the general tab panel.</sl-tab-panel
+            >
+            <sl-tab-panel name="custom"
+              >This is the custom tab panel.</sl-tab-panel
+            >
+            <sl-tab-panel name="advanced"
+              >This is the advanced tab panel.</sl-tab-panel
+            >
+            <sl-tab-panel name="disabled"
+              >This is a disabled tab panel.</sl-tab-panel
+            >
+          </sl-tab-group>
+        </div>
 
         <div id="manoeuvres-grid-container">
           <div class="manoeuvres-grid-item"></div>

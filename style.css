@@ -317,6 +317,44 @@ sl-progress-bar {
   text-align: center;
 }
 
+#board-calculator-grid-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 1200px;
+  height: 600px;
+}
+
+.board-calculator-column {
+  /* properties as a flex child */
+  flex: 1;
+  /* properties as a flex parent */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  border-right: solid lightgray 1px;
+  padding: 20px;
+}
+
+#board-calculator-grid-container input {
+  border: 1px lightgrey solid;
+  border-radius: 5px;
+  width: 80%;
+}
+
+#board-calculator-grid-container label {
+  font-weight: bold;
+}
+
+.col-section {
+  border: solid lightgrey 1px;
+}
+
+#choose-board-button {
+}
+
 /* --------------------------------------- */
 
 /* Ocean */
