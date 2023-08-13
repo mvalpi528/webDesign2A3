@@ -140,18 +140,19 @@
             <h3>About You</h3>
 
             <label for="user-height">What is your height in cm: </label>
-
             <input type="number" id="user-height" min="0" max="250" required />
-
-            <label for="user-age">What is your age: </label>
-            <input type="number" id="user-age" min="5" max="125" required />
 
             <label for="user-weight">What is your weight in kgs: </label>
             <input type="number" id="user-weight" min="0" max="500" required />
 
+            <label for="user-age">What is your age: </label>
+            <input type="number" id="user-age" min="5" max="125" required />
+
             <label for="user-years-surfing"
               >Years of surfing experience:
+              <span id="years-surfing-value"></span>
             </label>
+
             <input
               type="range"
               id="user-years-surfing"
@@ -159,23 +160,32 @@
               max="10"
               required
             />
-            <label for="user-surf-frequency">Number of surfs per week: </label>
+
+            <label for="user-surf-frequency"
+              >Number of surfs per week: <span id="surf-frequency-value"></span
+            ></label>
             <input
               type="range"
               id="user-surf-frequency"
               min="0"
-              max="500"
+              max="7"
               required
             />
           </div>
           <div class="board-calculator-column">
             <h3>Preferences</h3>
-            <sl-switch>Do you love sharp turns?</sl-switch>
-            <sl-switch>Do you want to catch waves earlier?</sl-switch>
-            <sl-switch>Do you prefer to cruise down the line?</sl-switch>
-            <sl-switch></sl-switch>
-            <sl-switch></sl-switch>
-            <sl-switch></sl-switch>
+            <sl-switch id="switch-sharp-turns"
+              >Do you love sharp turns?</sl-switch
+            >
+            <sl-switch id="switch-waves-earlier"
+              >Do you want to catch waves earlier?</sl-switch
+            >
+            <sl-switch id="switch-cruise"
+              >Do you prefer to cruise down the line?</sl-switch
+            >
+            <sl-switch id="switch-tbc1"></sl-switch>
+            <sl-switch id="switch-tbc2"></sl-switch>
+            <sl-switch id="switch-tbc3"></sl-switch>
             <sl-button id="choose-board-button">Choose my board</sl-button>
           </div>
           <div class="board-calculator-column">

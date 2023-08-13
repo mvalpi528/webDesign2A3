@@ -353,6 +353,7 @@ sl-progress-bar {
 }
 
 #choose-board-button {
+  cursor: pointer;
 }
 
 /* --------------------------------------- */
