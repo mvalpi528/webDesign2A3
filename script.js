@@ -82,6 +82,31 @@ function calculateBMI(height, weight) {
   return BMI;
 }
 
+// Helper function to clear the recommendations content
+function clearRecommendationContent(boardTypes) {
+  // This will be a nodeList containing the title and image for the current board type
+  let boardType;
+
+  for (const board of boardTypes) {
+    boardType = document.querySelectorAll(`.${board}-recommendation`);
+    // sets the display of the current title and image to none
+    for (const element of boardType) {
+      element.style.display = "none";
+    }
+  }
+}
+
+// Helper function to show the recommendations content
+function showRecommendation(boardType) {
+  console.log("Show recommendations function called");
+  const recommendationContent = document.querySelectorAll(
+    `.${boardType}-recommendation`
+  );
+  for (const element of recommendationContent) {
+    element.style.display = "block";
+  }
+}
+
 // Calculate the board type
 function calculateBoardType() {
   const userHeight = parseInt(document.querySelector("#user-height").value);
@@ -238,23 +263,35 @@ function calculateBoardType() {
     shortboardWeighting >= fishWeighting &&
     shortboardWeighting >= midlengthWeighting
   ) {
-    boardRecommendation = "shortBoard";
+    boardRecommendation = "shortboard";
   } else if (
     fishWeighting >= shortboardWeighting &&
     fishWeighting >= midlengthWeighting
   ) {
-    boardRecommendation = "midLength";
+    boardRecommendation = "fish";
   } else if (
     midlengthWeighting >= shortboardWeighting &&
     midlengthWeighting >= fishWeighting
   ) {
-    boardRecommendation = "midLength";
+    boardRecommendation = "midlength";
   }
 
   console.log(`boardRecommendation: ${boardRecommendation}`);
 
+  // clearing previous recommendations
+  const boardTypes = ["shortboard", "fish", "midlength"];
+  clearRecommendationContent(boardTypes);
+
   // displaying the relevant board based on the recommendations
-  //   if(boardRecommendation == "")
+  // placing an if statement as validation because the function will break if the argument
+  // is not "shortboard", "fish" or "midlength"
+  if (
+    boardRecommendation == "shortboard" ||
+    boardRecommendation == "fish" ||
+    boardRecommendation == "midlength"
+  ) {
+    showRecommendation(boardRecommendation);
+  }
 }
 
 // getting the button to store in a variable
