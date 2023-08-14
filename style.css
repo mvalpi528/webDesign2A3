@@ -293,9 +293,9 @@ sl-progress-bar {
 .equipment-content-card img {
   position: absolute;
   height: 400px;
-  left: 0;
+  left: 10%;
   bottom: 65px;
-  width: 100%;
+  width: 80%;
 }
 
 .learn-more {
@@ -354,6 +354,12 @@ sl-progress-bar {
 
 #choose-board-button {
   cursor: pointer;
+}
+
+.shortboard-recommendation,
+.fish-recommendation,
+.midlength-recommendation {
+  display: none;
 }
 
 /* --------------------------------------- */

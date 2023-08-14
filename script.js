@@ -93,7 +93,6 @@ function calculateBoardType() {
   const BMI = calculateBMI(userHeight, userWeight);
   console.log(`BMI: ${BMI}`);
 
-  // Preferences from the shoelace UI components
   const userYearsSurfing = document.querySelector("#user-years-surfing").value;
   console.log(`userYearsSurfing: ${userYearsSurfing}`);
   const userSurfFrequency = document.querySelector(
@@ -101,14 +100,32 @@ function calculateBoardType() {
   ).value;
   console.log(`userSurfFrequency: ${userSurfFrequency}`);
 
+  // Preferences from the shoelace UI components
   const likesSharpTurns = document.getElementById("switch-sharp-turns").checked;
   console.log(`likesSharpTurns: ${likesSharpTurns}`);
+
   const likesWavesEarlier = document.getElementById(
     "switch-waves-earlier"
   ).checked;
   console.log(`likesWavesEarlier: ${likesWavesEarlier}`);
-  const likesToCruise = document.getElementById("switch-cruise").checked;
-  console.log(`likesToCruise: ${likesToCruise}`);
+
+  const likesTheHighLine = document.getElementById("switch-high-line").checked;
+  console.log(`likesTheHighLine: ${likesTheHighLine}`);
+
+  const likesPaddlePower = document.getElementById(
+    "switch-paddle-power"
+  ).checked;
+  console.log(`likesPaddlePower: ${likesPaddlePower}`);
+
+  const likesLooseFlowingTurns = document.getElementById(
+    "switch-loose-flowing-turns"
+  ).checked;
+  console.log(`likesLooseFlowingTurns: ${likesLooseFlowingTurns}`);
+
+  const likesRailToRail = document.getElementById(
+    "switch-rail-to-rail"
+  ).checked;
+  console.log(`likesRailToRail: ${likesRailToRail}`);
 
   // each board type will be represented by a number
   // factors that mean the user will likely ride a short board will be represented by a 1
@@ -165,9 +182,79 @@ function calculateBoardType() {
     boardTypeWeightings.push(3);
   }
 
-  for (let i = 0; i < boardTypeWeightings.length; i++) {
-    console.log(boardTypeWeightings[i]);
+  if (likesSharpTurns == true) {
+    // increase weighting for shortboard
+    boardTypeWeightings.push(1);
   }
+
+  if (likesWavesEarlier == true) {
+    // increase weighting for midlength
+    boardTypeWeightings.push(3);
+  }
+
+  if (likesTheHighLine == true) {
+    // increase weighting for midlength
+    boardTypeWeightings.push(3);
+  }
+
+  if (likesPaddlePower == true) {
+    // increase weighting for fish
+    boardTypeWeightings.push(2);
+  }
+
+  if (likesLooseFlowingTurns == true) {
+    // increase weighting for fish
+    boardTypeWeightings.push(2);
+  }
+
+  if (likesRailToRail == true) {
+    // increase weighting for shortboard
+    boardTypeWeightings.push(1);
+  }
+
+  // initialise variables to store the counts for each board
+  let shortboardWeighting = 0;
+  let fishWeighting = 0;
+  let midlengthWeighting = 0;
+
+  // loop through the array and count the frequency of each number
+  for (let i = 0; i < boardTypeWeightings.length; i++) {
+    if (boardTypeWeightings[i] == 1) {
+      shortboardWeighting++;
+    } else if (boardTypeWeightings[i] == 2) {
+      fishWeighting++;
+    } else if (boardTypeWeightings[i] == 3) {
+      midlengthWeighting++;
+    }
+  }
+
+  console.log(`shortboardWeighting: ${shortboardWeighting}`);
+  console.log(`fishWeighting: ${fishWeighting}`);
+  console.log(`midlengthWeighting: ${midlengthWeighting}`);
+
+  let boardRecommendation;
+  // recommend the board based on the ratings
+  if (
+    shortboardWeighting >= fishWeighting &&
+    shortboardWeighting >= midlengthWeighting
+  ) {
+    boardRecommendation = "shortBoard";
+  } else if (
+    fishWeighting >= shortboardWeighting &&
+    fishWeighting >= midlengthWeighting
+  ) {
+    boardRecommendation = "midLength";
+  } else if (
+    midlengthWeighting >= shortboardWeighting &&
+    midlengthWeighting >= fishWeighting
+  ) {
+    boardRecommendation = "midLength";
+  }
+
+  console.log(`boardRecommendation: ${boardRecommendation}`);
+
+  // displaying the relevant board based on the recommendations
+  //   if(boardRecommendation == "")
 }
 
 // getting the button to store in a variable

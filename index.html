@@ -88,7 +88,7 @@
               sharp turns
             </p>
             <img
-              src="images/equipment/shortboard.webp"
+              src="./images/equipment/hpshortboard.png"
               alt="a high performace surfboard"
             />
             <sl-button id="shortboard-learn-more" class="learn-more"
@@ -104,7 +104,7 @@
           <div class="equipment-content-card">
             <h3>Fish</h3>
             <p>Fish surfboards have more volume etc</p>
-            <img src="images/equipment/fish.webp" alt="a fish surfboard" />
+            <img src="./images/equipment/fish.png" alt="a fish surfboard" />
             <sl-button id="fish-learn-more" class="learn-more"
               >Learn More</sl-button
             >
@@ -119,7 +119,7 @@
             <h3>Midlength</h3>
             <p>Midlengths are big ect</p>
             <img
-              src="images/equipment/midlength.jpeg"
+              src="./images/equipment/midlength.png"
               alt="a midlength surfboard"
             />
             <sl-button id="midlength-learn-more" class="learn-more"
@@ -140,56 +140,64 @@
             <h3>About You</h3>
 
             <label for="user-height">What is your height in cm: </label>
-            <input type="number" id="user-height" min="0" max="250" required />
+            <input type="number" id="user-height" min="0" max="250" />
 
             <label for="user-weight">What is your weight in kgs: </label>
-            <input type="number" id="user-weight" min="0" max="500" required />
+            <input type="number" id="user-weight" min="0" max="500" />
 
             <label for="user-age">What is your age: </label>
-            <input type="number" id="user-age" min="5" max="125" required />
+            <input type="number" id="user-age" min="5" max="125" />
 
             <label for="user-years-surfing"
               >Years of surfing experience:
               <span id="years-surfing-value"></span>
             </label>
 
-            <input
-              type="range"
-              id="user-years-surfing"
-              min="0"
-              max="10"
-              required
-            />
+            <input type="range" id="user-years-surfing" min="0" max="10" />
 
             <label for="user-surf-frequency"
               >Number of surfs per week: <span id="surf-frequency-value"></span
             ></label>
-            <input
-              type="range"
-              id="user-surf-frequency"
-              min="0"
-              max="7"
-              required
-            />
+            <input type="range" id="user-surf-frequency" min="0" max="7" />
           </div>
           <div class="board-calculator-column">
             <h3>Preferences</h3>
-            <sl-switch id="switch-sharp-turns"
-              >Do you love sharp turns?</sl-switch
+            <p>Select all the options that you want in your surfing:</p>
+            <sl-switch id="switch-sharp-turns">Sharp turns</sl-switch>
+            <sl-switch id="switch-waves-earlier">Catch waves earlier</sl-switch>
+            <sl-switch id="switch-high-line">Take the high line</sl-switch>
+            <sl-switch id="switch-paddle-power">Extra help paddling</sl-switch>
+            <sl-switch id="switch-loose-flowing-turns"
+              >Loose flowing turns</sl-switch
             >
-            <sl-switch id="switch-waves-earlier"
-              >Do you want to catch waves earlier?</sl-switch
+            <sl-switch id="switch-rail-to-rail"
+              >Spend more time on rail</sl-switch
             >
-            <sl-switch id="switch-cruise"
-              >Do you prefer to cruise down the line?</sl-switch
-            >
-            <sl-switch id="switch-tbc1"></sl-switch>
-            <sl-switch id="switch-tbc2"></sl-switch>
-            <sl-switch id="switch-tbc3"></sl-switch>
             <sl-button id="choose-board-button">Choose my board</sl-button>
           </div>
           <div class="board-calculator-column">
             <h3>The Board</h3>
+            <!-- shortboard recommendation image -->
+            <h4 class="shortboard-recommendation">Shortboard</h4>
+            <img
+              src="./images/equipment/hpshortboard.png"
+              alt=""
+              class="shortboard-recommendation"
+            />
+            <!-- fish recommendation image -->
+            <h4 class="fish-recommendation">Fish</h4>
+            <img
+              src="./images/equipment/fish.png"
+              alt=""
+              class="fish-recommendation"
+            />
+            <!-- midlength recommendation image -->
+            <h4 class="midlength-recommendation">Midlength</h4>
+            <img
+              src="./images/equipment/midlength.png"
+              alt=""
+              class="midlength-recommendation"
+            />
           </div>
         </div>
       </section>
