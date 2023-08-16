@@ -83,7 +83,7 @@ textarea {
   --primary-font: "Koulen", cursive;
   --secondary-font: "Montserrat", sans-serif;
 
-  --largest: 12rem;
+  --largest: 10rem;
   --large: 6rem;
   --medium: 4rem;
   --small: 2rem;
@@ -94,6 +94,7 @@ html {
 }
 
 section {
+  border: red 1px solid;
   min-height: 100vh;
   padding-top: 100px;
 }
@@ -131,7 +132,7 @@ body {
 /* Header */
 
 header {
-  height: 80px;
+  min-height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -147,33 +148,23 @@ header {
 }
 
 nav {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
+  height: 80px;
+}
+
+#nav-flex-container {
+  width: 100%;
+  display: flex;
 }
 
 #nav-links {
+  height: 100%;
   width: 70%;
-}
-
-#nav-buttons {
-  width: 30%;
-}
-
-#login-button,
-#signup-button {
-  padding: 5px 10px;
-  border-radius: 10px;
-  background-color: var(--tertiary-color);
-  color: var(--primary-color);
-  font-family: var(--heading-font);
-  font-size: var(--small);
-}
-
-#login-button:hover,
-#signup-button:hover {
-  background-color: var(--primary-color);
 }
 
 nav ul {
@@ -200,6 +191,24 @@ sl-progress-bar {
   z-index: 99;
 }
 
+.hamburger-menu {
+  position: absolute;
+  top: 10px;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 25px;
+}
+
+.hamburger-menu .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
 /* --------------------------------------- */
 
 /* Hero */
@@ -222,8 +231,8 @@ sl-progress-bar {
 
 .hero-text {
   position: absolute;
-  top: 50%;
-  right: 10%;
+  top: 40%;
+  left: 10%;
 }
 
 /* --------------------------------------- */
@@ -309,6 +318,19 @@ sl-progress-bar {
   cursor: pointer;
 }
 
+sl-dialog {
+  text-align: left;
+}
+
+sl-dialog p,
+ul {
+  padding-top: 1rem;
+}
+
+sl-dialog li {
+  list-style: circle;
+}
+
 /* --------------------------------------- */
 
 /* Board Calculator */
@@ -323,7 +345,7 @@ sl-progress-bar {
   flex-direction: row;
   width: 80%;
   max-width: 1200px;
-  height: 600px;
+  min-height: 600px;
 }
 
 .board-calculator-column {
@@ -391,7 +413,6 @@ sl-progress-bar {
 
 .spot-type:hover {
   transform: scale(1.02);
-  opacity: 0.1;
 }
 
 .spot-type-description {
@@ -519,13 +540,6 @@ sl-progress-bar {
   object-fit: cover;
 }
 
-/* Reconsider this media query */
-@media (max-width: 768px) {
-  .section-container .popup-image img {
-    width: 95%;
-  }
-}
-
 /* --------------------------------------- */
 
 /* Manouvers */
@@ -536,4 +550,110 @@ sl-progress-bar {
 
 #manoeuvres-grid-container {
   display: grid;
+}
+
+/* --------------------------------------- */
+
+/* Media Queries */
+
+/* Reconsider this media query */
+@media (max-width: 768px) {
+  /* Nav bar responsiveness --------- */
+  sl-progress-bar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu:hover {
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  #nav-flex-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  #nav-links,
+  #nav-button {
+    width: 100%;
+    height: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  /* Hero section responsiveness --------- */
+
+  /* About us responsiveness --------- */
+  #about-us-content-container {
+    flex-direction: column;
+  }
+
+  #about-us-content-container div {
+    height: 50%;
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px black;
+  }
+
+  #about-us-content-container div p {
+    color: var(--text-color);
+    margin: 20px;
+    text-align: left;
+  }
+
+  #about-us-image img {
+    border-radius: 3px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Equipment responsiveness */
+
+  #equipment-content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Board Calculator responsivenesss */
+  #board-calculator-grid-container {
+    flex-direction: column;
+  }
+
+  /* Image gallery responsiveness */
+  .section-container .popup-image img {
+    width: 95%;
+  }
 }

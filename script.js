@@ -1,4 +1,4 @@
-// progress bar --- update value on scroll
+// progress bar --- update value on scroll ------------------------------------------
 
 // selecting the progress bar
 const progressBar = document.getElementById("progress-bar");
@@ -22,7 +22,25 @@ document.addEventListener("scroll", () => {
   progressBar.value = scrollProgress;
 });
 
-// Surfboard Dialogs ---
+// Hamburger Menu ------------------------------------------------------------------
+
+// selecting the hamburger button
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+// selecting the nav links
+const navLinks = document.getElementById("nav-links");
+// selecting the nav buttons
+const navButtons = document.getElementById("nav-buttons");
+
+// hamburger button listening for click event
+hamburgerMenu.addEventListener("click", () => {
+  // click event toggles the 'active' class which activates a CSS style rule
+  // that changes the display property from 'none' to 'flex'
+  navLinks.classList.toggle("active");
+  navButtons.classList.toggle("active");
+});
+
+// Surfboard Dialogs ---------------------------------------------------------------
 
 // Shortboard
 
@@ -105,6 +123,21 @@ function showRecommendation(boardType) {
   for (const element of recommendationContent) {
     element.style.display = "block";
   }
+}
+
+// As the inputs are not inside of a form element a custom function has been created
+// to prevent form submission before all of the inputs have been added
+function checkUserInputCompleted() {
+  let userInputsCompleted = true;
+  const userInputs = document.querySelectorAll("input");
+
+  for (let i = 0; i < userInputs.length; i++) {
+    if (userInputs[i].value == "") {
+      userInputsCompleted = false;
+    }
+  }
+
+  return userInputsCompleted;
 }
 
 // Calculate the board type
@@ -298,7 +331,12 @@ function calculateBoardType() {
 const calculateButton = document.getElementById("choose-board-button");
 // Calls the function when the button is pushed
 calculateButton.addEventListener("click", () => {
-  calculateBoardType();
+  const userInputsCompleted = checkUserInputCompleted();
+  if (userInputsCompleted) {
+    calculateBoardType();
+  } else {
+    alert("We can't recommend a board unless you fill out your preferences");
+  }
 });
 
 // Gallery Images -- image popups ------
