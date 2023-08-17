@@ -87,6 +87,7 @@ textarea {
   --large: 6rem;
   --medium: 4rem;
   --small: 2rem;
+  --body-text: 1rem;
 }
 
 html {
@@ -301,10 +302,16 @@ sl-progress-bar {
 
 .equipment-content-card img {
   position: absolute;
-  height: 400px;
+  height: 390px;
   left: 10%;
   bottom: 65px;
   width: 80%;
+}
+
+.equipment-content-card p {
+  text-align: left;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
 }
 
 .learn-more {
@@ -413,6 +420,7 @@ sl-dialog li {
 
 .spot-type:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .spot-type-description {
@@ -444,6 +452,40 @@ sl-dialog li {
   color: white;
   top: 60%;
   right: 10%;
+}
+
+/* Styling for modals */
+
+.spot-type-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: var(--contrast-desaturated);
+  text-align: left;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.spot-type-modal-close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.spot-type-modal-close-button:hover {
+  cursor: pointer;
 }
 
 /* --------------------------------------- */
@@ -556,8 +598,17 @@ sl-dialog li {
 
 /* Media Queries */
 
-/* Reconsider this media query */
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
+  /* font sizes */
+  :root {
+    --largest: 5rem;
+    --large: 3rem;
+    --medium: 2.5rem;
+    --small: 1.25rem;
+    --body-text: 0.7rem;
+  }
+
   /* Nav bar responsiveness --------- */
   sl-progress-bar {
     display: none;
@@ -652,8 +703,20 @@ sl-dialog li {
     flex-direction: column;
   }
 
+  /* Spot types responsiveness */
+
   /* Image gallery responsiveness */
   .section-container .popup-image img {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  :root {
+    --largest: 7rem;
+    --large: 4rem;
+    --medium: 3rem;
+    --small: 1.5rem;
+    --body-text: 0.8rem;
   }
 }

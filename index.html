@@ -83,7 +83,7 @@
             <h3>Shortboard</h3>
             <p>
               Short boards are high-performance surfboards, designed to make
-              sharp turns
+              sharp turns on critical sections of the wave.
             </p>
             <img
               src="./images/equipment/hpshortboard.png"
@@ -114,7 +114,10 @@
 
           <div class="equipment-content-card">
             <h3>Fish</h3>
-            <p>Fish surfboards have more volume etc</p>
+            <p>
+              Fish surfboards are short and wide surf boards that typically have
+              plenty of volume for their size.
+            </p>
             <img src="./images/equipment/fish.png" alt="a fish surfboard" />
             <sl-button id="fish-learn-more" class="learn-more"
               >Learn More</sl-button
@@ -122,26 +125,30 @@
           </div>
 
           <sl-dialog label="The Fish" id="fish-dialog">
-            A fish surfboard is a distinct type of surfboard known for its
-            unique shape and design, inspired by the twin-finned boards that
-            gained popularity in the 1970s. Characterized by its shorter length,
-            wide outline, and distinctive swallowtail or split tail shape, the
-            fish surfboard offers a blend of speed, agility, and versatility. It
-            typically features two or more fins, set closer to the tail,
-            enhancing its maneuverability and ability to generate speed in
-            smaller or mushier waves. The design allows for quick turns and the
-            ability to catch waves with ease. Fish surfboards are favored by
-            surfers who want to experience the sensation of glide and smooth
-            turns, making them ideal for smaller wave conditions. Whether you're
-            a beginner or an experienced rider, a fish surfboard can provide a
-            fun and dynamic surfing experience that captures the essence of
-            classic wave riding.
+            <p>
+              The fish surfboard is a type of surfboard inspired by the
+              twin-finned boards that gained popularity in the 1970s.
+            </p>
+            <p>The fish is defined by:</p>
+
+            <ul>
+              <li>shorter length</li>
+              <li>wide outline</li>
+              <li>swallowtail or split tail shape</li>
+              <li>typically has two fins</li>
+              <li>flatter rocker</li>
+              <li>wider nose</li>
+            </ul>
+
             <sl-button slot="footer" variant="primary">Close</sl-button>
           </sl-dialog>
 
           <div class="equipment-content-card">
             <h3>Midlength</h3>
-            <p>Midlengths are big ect</p>
+            <p>
+              Midlengths are bigger surfboards that have significantly more
+              volume and can be up to 8ft in length.
+            </p>
             <img
               src="./images/equipment/midlength.png"
               alt="a midlength surfboard"
@@ -152,22 +159,21 @@
           </div>
 
           <sl-dialog label="The Midlength" id="midlength-dialog">
-            A midlength surfboard is a versatile and balanced option that
-            bridges the gap between shortboards and longboards. With a length
-            typically ranging from 6 to 8 feet, a midlength surfboard combines
-            the best of both worlds, offering the stability of a longboard while
-            retaining some of the maneuverability of a shortboard. Its design
-            often includes a classic shape with a rounded nose, moderate rocker,
-            and a forgiving level of volume. This makes it well-suited for a
-            wide range of conditions, from smaller waves to more sizable swells.
-            The midlength board is a popular choice for surfers looking to enjoy
-            a relaxed and smooth ride, ideal for trimming along the wave's face
-            and executing graceful turns. Its versatility caters to both
-            beginners looking to progress and experienced surfers seeking a
-            different kind of wave-riding experience. Whether you're looking to
-            cruise, carve, or experiment with various surfing techniques, a
-            midlength surfboard provides an appealing compromise that blends
-            stability, maneuverability, and fun on the water.
+            <p>
+              A midlength surfboard is a versatile and balanced option that
+              bridges the gap between shortboards and longboards.
+            </p>
+            <p>The midlength is defined by:</p>
+
+            <ul>
+              <li>6 to 8 feet long</li>
+              <li>rounded nose</li>
+              <li>moderate rocker</li>
+              <li>well-suited for a wide range of conditions</li>
+              <li>relaxed and smooth ride</li>
+              <li>ideal for trimming along the wave's face</li>
+            </ul>
+
             <sl-button slot="footer" variant="primary">Close</sl-button>
           </sl-dialog>
         </div>
@@ -235,23 +241,23 @@
             <sl-button id="choose-board-button">Choose my board</sl-button>
           </div>
           <div class="board-calculator-column">
-            <h3>The Board</h3>
+            <h3>You should try using:</h3>
             <!-- shortboard recommendation image -->
-            <h4 class="shortboard-recommendation">Shortboard</h4>
+            <h3 class="shortboard-recommendation">A Shortboard</h3>
             <img
               src="./images/equipment/hpshortboard.png"
               alt=""
               class="shortboard-recommendation"
             />
             <!-- fish recommendation image -->
-            <h4 class="fish-recommendation">Fish</h4>
+            <h3 class="fish-recommendation">A Fish</h3>
             <img
               src="./images/equipment/fish.png"
               alt=""
               class="fish-recommendation"
             />
             <!-- midlength recommendation image -->
-            <h4 class="midlength-recommendation">Midlength</h4>
+            <h3 class="midlength-recommendation">A Midlength</h3>
             <img
               src="./images/equipment/midlength.png"
               alt=""
@@ -263,19 +269,57 @@
       <section id="ocean">
         <h2>Spot Types</h2>
         <div id="spot-types-container">
+          <!-- reef -->
           <div class="spot-container">
             <div id="reef" class="spot-type">
               <h3 class="spot-type-title">Reef</h3>
             </div>
           </div>
+          <div class="spot-type-modal" id="reef-modal">
+            <div class="modal-content">
+              <span id="reef-close" class="spot-type-modal-close-button"
+                >&times;</span
+              >
+              <h3>Reef Breaks</h3>
+              <p>
+                A reef break in surfing is a dynamic wave formation where waves
+                break over submerged coral reefs or rocky structures near the
+                coastline. These waves are known for their fast, hollow, and
+                barreling nature, making them exhilarating for experienced
+                surfers. Surfing a reef break requires skill and precision due
+                to the shallow water above the reef, which can pose hazards.
+                Reef breaks offer consistent waves shaped by the reef's
+                contours, providing a thrilling and challenging experience for
+                surfers who are skilled at wave selection and positioning.
+              </p>
+            </div>
+          </div>
+          <!-- point -->
           <div class="spot-container">
-            <div id="point" class="spot-type">
+            <div id="point" class="spot-type" id="point-open">
               <h3 class="spot-type-title">Point Break</h3>
             </div>
           </div>
+          <div class="spot-type-modal" id="point-modal">
+            <div class="modal-content">
+              <span id="point-close" class="spot-type-modal-close-button"
+                >&times;</span
+              >
+              <p>Point Modal</p>
+            </div>
+          </div>
+          <!-- beach -->
           <div class="spot-container">
-            <div id="beachbreak" class="spot-type">
+            <div id="beachbreak" class="spot-type" id="beach-open">
               <h3 class="spot-type-title">Beach Break</h3>
+            </div>
+          </div>
+          <div class="spot-type-modal" id="beach-modal">
+            <div class="modal-content">
+              <span id="beach-close" class="spot-type-modal-close-button"
+                >&times;</span
+              >
+              <p>Beach Modal</p>
             </div>
           </div>
         </div>

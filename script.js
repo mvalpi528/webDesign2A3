@@ -120,6 +120,7 @@ function showRecommendation(boardType) {
   const recommendationContent = document.querySelectorAll(
     `.${boardType}-recommendation`
   );
+
   for (const element of recommendationContent) {
     element.style.display = "block";
   }
@@ -336,6 +337,60 @@ calculateButton.addEventListener("click", () => {
     calculateBoardType();
   } else {
     alert("We can't recommend a board unless you fill out your preferences");
+  }
+});
+
+// Spot types ---- modals ------
+
+// reef
+
+const reefModal = document.getElementById("reef-modal");
+const reefImage = document.getElementById("reef");
+const reefCloseButton = document.getElementById("reef-close");
+
+reefImage.addEventListener("click", () => {
+  reefModal.style.display = "block";
+});
+
+reefCloseButton.addEventListener("click", () => {
+  reefModal.style.display = "none";
+});
+
+// point
+
+const pointModal = document.getElementById("point-modal");
+const pointImage = document.getElementById("point");
+const pointCloseButton = document.getElementById("point-close");
+
+pointImage.addEventListener("click", () => {
+  pointModal.style.display = "block";
+});
+
+pointCloseButton.addEventListener("click", () => {
+  pointModal.style.display = "none";
+});
+
+// beach
+
+const beachModal = document.getElementById("beach-modal");
+const beachImage = document.getElementById("beachbreak");
+const beachCloseButton = document.getElementById("beach-close");
+
+beachImage.addEventListener("click", () => {
+  beachModal.style.display = "block";
+});
+
+beachCloseButton.addEventListener("click", () => {
+  beachModal.style.display = "none";
+});
+
+// leave modal without close button click
+
+window.addEventListener("click", (event) => {
+  if (event.target.className === "spot-type-modal") {
+    reefModal.style.display = "none";
+    pointModal.style.display = "none";
+    beachModal.style.display = "none";
   }
 });
 
