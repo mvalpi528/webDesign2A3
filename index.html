@@ -33,7 +33,7 @@
           <ul id="nav-links">
             <li><a href="#equipment">Equipment</a></li>
             <li><a href="#ocean">Ocean</a></li>
-            <li><a href="#manoeuvres">Manoeuvres</a></li>
+            <li><a href="#destinations">Destinations</a></li>
           </ul>
         </div>
       </nav>
@@ -281,6 +281,9 @@
                 >&times;</span
               >
               <h3>Reef Breaks</h3>
+              <video controls class="modal-video">
+                <source src="videos/reef.mp4" type="video/mp4" />
+              </video>
               <p>
                 A reef break in surfing is a dynamic wave formation where waves
                 break over submerged coral reefs or rocky structures near the
@@ -305,7 +308,21 @@
               <span id="point-close" class="spot-type-modal-close-button"
                 >&times;</span
               >
-              <p>Point Modal</p>
+              <h3>Point Breaks</h3>
+              <video controls class="modal-video">
+                <source src="videos/reef.mp4" type="video/mp4" />
+              </video>
+              <p>
+                A point break in surfing is a type of wave formation that occurs
+                when ocean swells interact with a coastline's underwater
+                geography. These waves break along a promontory or point of
+                land, generating long, consistent rides with a peeling and
+                graceful motion. Point breaks are known for producing waves that
+                peel both left and right, offering surfers the opportunity for
+                extended rides along the wave's face. These breaks often create
+                ideal conditions for maneuvers, making them popular among
+                surfers seeking fluid and stylish rides.
+              </p>
             </div>
           </div>
           <!-- beach -->
@@ -319,15 +336,30 @@
               <span id="beach-close" class="spot-type-modal-close-button"
                 >&times;</span
               >
-              <p>Beach Modal</p>
+              <h3>Beach Breaks</h3>
+              <video controls class="modal-video">
+                <source src="videos/reef.mp4" type="video/mp4" />
+              </video>
+              <p>
+                A beach break in surfing is a dynamic wave environment formed
+                when waves break over a sandy ocean floor near the shoreline.
+                Unlike fixed reef or rock formations, beach breaks can shift and
+                change based on sand movement and tide. These breaks offer a mix
+                of wave types, from gentle rollers to more powerful and
+                unpredictable shorebreaks. Beach breaks are favored for their
+                versatility, attracting surfers of all levels who seek a variety
+                of wave experiences in a sandy and ever-changing setting.
+              </p>
             </div>
           </div>
         </div>
       </section>
       <section id="destinations">
         <h2>destinations</h2>
-        <p>surfing can take you all over the world</p>
-        <p>explore some of the most popular destinations</p>
+        <h3>surfing can take you all over the world</h3>
+        <h3 id="explore-popular-destinations">
+          explore some of the most popular destinations
+        </h3>
         <div class="section-container">
           <div class="img-container">
             <div class="image">
@@ -383,38 +415,6 @@
             <span>&times;</span>
             <div><img src="images/maldives.jpg" alt="" /></div>
           </div>
-        </div>
-      </section>
-      <section id="manoeuvres">
-        <h2>Manoeuvres</h2>
-        <!-- figure out why this dialog isnt working -->
-        <div id="sl-dialog-container">
-          <sl-tab-group>
-            <sl-tab slot="nav" panel="general">General</sl-tab>
-            <sl-tab slot="nav" panel="custom">Custom</sl-tab>
-            <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
-            <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
-
-            <sl-tab-panel name="general"
-              >This is the general tab panel.</sl-tab-panel
-            >
-            <sl-tab-panel name="custom"
-              >This is the custom tab panel.</sl-tab-panel
-            >
-            <sl-tab-panel name="advanced"
-              >This is the advanced tab panel.</sl-tab-panel
-            >
-            <sl-tab-panel name="disabled"
-              >This is a disabled tab panel.</sl-tab-panel
-            >
-          </sl-tab-group>
-        </div>
-
-        <div id="manoeuvres-grid-container">
-          <div class="manoeuvres-grid-item"></div>
-          <div class="manoeuvres-grid-item"></div>
-          <div class="manoeuvres-grid-item"></div>
-          <div class="manoeuvres-grid-item"></div>
         </div>
       </section>
     </main>

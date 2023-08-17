@@ -457,6 +457,7 @@ sl-dialog li {
 /* Styling for modals */
 
 .spot-type-modal {
+  text-align: center;
   display: none;
   position: fixed;
   z-index: 1;
@@ -469,12 +470,17 @@ sl-dialog li {
 }
 
 .modal-content {
+  max-width: 800px;
   background-color: var(--contrast-desaturated);
   text-align: left;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+}
+
+.modal-video {
+  width: 100%;
 }
 
 .spot-type-modal-close-button {
@@ -494,6 +500,11 @@ sl-dialog li {
 
 #destinations {
   text-align: center;
+}
+
+#destinations h3 {
+  font-size: var(--small);
+  font-family: var(--hero-font);
 }
 
 .section-container {
@@ -580,18 +591,6 @@ sl-dialog li {
   width: 750px;
   max-height: 500px;
   object-fit: cover;
-}
-
-/* --------------------------------------- */
-
-/* Manouvers */
-
-#manoeuvres {
-  text-align: center;
-}
-
-#manoeuvres-grid-container {
-  display: grid;
 }
 
 /* --------------------------------------- */
