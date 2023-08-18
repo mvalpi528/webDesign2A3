@@ -342,6 +342,13 @@ calculateButton.addEventListener("click", () => {
 
 // Spot types ---- modals ------
 
+// selecting all videos to make sure that they stop playing when the user leaves the modal
+
+const allVideos = document.getElementsByClassName("modal-video");
+const reefVideo = document.getElementById("reef-video");
+const pointVideo = document.getElementById("point-video");
+const beachVideo = document.getElementById("beach-video");
+
 // reef
 
 const reefModal = document.getElementById("reef-modal");
@@ -354,6 +361,7 @@ reefImage.addEventListener("click", () => {
 
 reefCloseButton.addEventListener("click", () => {
   reefModal.style.display = "none";
+  reefVideo.pause();
 });
 
 // point
@@ -368,6 +376,7 @@ pointImage.addEventListener("click", () => {
 
 pointCloseButton.addEventListener("click", () => {
   pointModal.style.display = "none";
+  pointVideo.pause();
 });
 
 // beach
@@ -382,17 +391,27 @@ beachImage.addEventListener("click", () => {
 
 beachCloseButton.addEventListener("click", () => {
   beachModal.style.display = "none";
+  beachVideo.pause();
 });
 
-// leave modal without close button click
+// leave modal without close button click - also pauses the video
+// get all modals in a HTML collection
+const allModals = document.getElementsByClassName("spot-type-modal");
 
 window.addEventListener("click", (event) => {
   if (event.target.className === "spot-type-modal") {
-    reefModal.style.display = "none";
-    pointModal.style.display = "none";
-    beachModal.style.display = "none";
+    for (let i = 0; i < allModals.length; i++) {
+      allModals[i].style.display = "none";
+    }
+
+    // calls the .pause method on all of the modal videos
+    for (let i = 0; i < allVideos.length; i++) {
+      allVideos[i].pause();
+    }
   }
 });
+
+// video should pause when the user leaves the modal
 
 // Gallery Images -- image popups ------
 
