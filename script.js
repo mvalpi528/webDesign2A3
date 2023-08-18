@@ -398,13 +398,17 @@ beachCloseButton.addEventListener("click", () => {
 // get all modals in a HTML collection
 const allModals = document.getElementsByClassName("spot-type-modal");
 
+// this listens for a click event anywhere on the page and if the click
+// occurs in the modal area but not in the modal content then all modals will
+// be closed and all videos paused
 window.addEventListener("click", (event) => {
   if (event.target.className === "spot-type-modal") {
+    // close all modals
     for (let i = 0; i < allModals.length; i++) {
       allModals[i].style.display = "none";
     }
 
-    // calls the .pause method on all of the modal videos
+    // pause all videos
     for (let i = 0; i < allVideos.length; i++) {
       allVideos[i].pause();
     }
@@ -434,3 +438,86 @@ function createImagePopUp(imageCollection) {
 }
 
 createImagePopUp(galleryImages);
+
+// Scroll Animation
+
+// gsap
+
+// Animating the equipment section ----
+
+// shortboard
+
+let shortBoardGSAP = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#shortboard-content-card",
+    start: "top 85%",
+    // having scrub set to true makes the animation continuously tied to the scroll position
+    scrub: false,
+    markers: false,
+  },
+});
+
+shortBoardGSAP.to("#shortboard-content-card", {
+  x: 500,
+  opacity: 1,
+  duration: 1.4,
+  ease: "ease-in-out",
+});
+
+// fish
+
+let fishGSAP = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#fish-content-card",
+    start: "top 85%",
+    scrub: false,
+    markers: false,
+  },
+});
+
+fishGSAP.to("#fish-content-card", {
+  x: 500,
+  opacity: 1,
+  duration: 1.2,
+  ease: "ease-in-out",
+});
+
+// midlength
+
+let midlengthGSAP = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#midlength-content-card",
+    start: "top 85%",
+    // having scrub set to true makes the animation continuously tied to the scroll position
+    scrub: false,
+    markers: false,
+  },
+});
+
+midlengthGSAP.to("#midlength-content-card", {
+  x: 500,
+  opacity: 1,
+  duration: 1,
+  ease: "ease-in-out",
+});
+
+// smooth scroll
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// References
+
+// Videos
+
+// https://www.youtube.com/watch?v=Hh1ckWJF7_0 - beach modal
+// https://www.youtube.com/watch?v=A3X-SjtGj3k - point modal

@@ -79,7 +79,7 @@
       <section id="equipment">
         <h2>The Surfer's Quiver</h2>
         <div id="equipment-content-container">
-          <div class="equipment-content-card">
+          <div class="equipment-content-card" id="shortboard-content-card">
             <h3>Shortboard</h3>
             <p>
               Short boards are high-performance surfboards, designed to make
@@ -112,7 +112,7 @@
             <sl-button slot="footer" variant="primary">Close</sl-button>
           </sl-dialog>
 
-          <div class="equipment-content-card">
+          <div class="equipment-content-card" id="fish-content-card">
             <h3>Fish</h3>
             <p>
               Fish surfboards are short and wide surf boards that typically have
@@ -143,7 +143,7 @@
             <sl-button slot="footer" variant="primary">Close</sl-button>
           </sl-dialog>
 
-          <div class="equipment-content-card">
+          <div class="equipment-content-card" id="midlength-content-card">
             <h3>Midlength</h3>
             <p>
               Midlengths are bigger surfboards that have significantly more
@@ -310,7 +310,7 @@
               >
               <h3>Point Breaks</h3>
               <video controls class="modal-video" id="point-video">
-                <source src="videos/reef.mp4" type="video/mp4" />
+                <source src="videos/point.mp4" type="video/mp4" />
               </video>
               <p>
                 A point break in surfing is a type of wave formation that occurs
@@ -338,7 +338,7 @@
               >
               <h3>Beach Breaks</h3>
               <video controls class="modal-video" id="beach-video">
-                <source src="videos/reef.mp4" type="video/mp4" />
+                <source src="videos/beach.mp4" type="video/mp4" />
               </video>
               <p>
                 A beach break in surfing is a dynamic wave environment formed
@@ -421,9 +421,14 @@
     <footer>
       <div class="footer-container"></div>
     </footer>
+    <!-- Importing shoelace -->
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/shoelace-autoloader.js"
     ></script>
+    <!-- Importing GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.19/dist/lenis.min.js"></script>
   </body>
 </html>

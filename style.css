@@ -178,12 +178,12 @@ nav li a {
   font-family: var(--hero-font);
   font-size: var(--small);
   font-weight: 600;
-  transition: 1s ease;
   color: var(--text-color);
 }
 
 nav li a:hover {
-  color: var(--hero-colour);
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 sl-progress-bar {
@@ -336,6 +336,14 @@ ul {
 
 sl-dialog li {
   list-style: circle;
+}
+
+#shortboard-content-card,
+#fish-content-card,
+#midlength-content-card {
+  /* setting a position so that it animates in */
+  left: -500px;
+  opacity: 0;
 }
 
 /* --------------------------------------- */
