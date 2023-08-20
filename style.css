@@ -139,7 +139,7 @@ header {
   align-items: center;
   justify-items: flex-start;
   justify-content: space-between;
-  padding: 0px 2 0px;
+  padding: 0px 2px 0px;
   position: sticky;
   top: 0;
   left: 0;
@@ -225,7 +225,7 @@ sl-progress-bar {
 #hero-image {
   height: 100%;
   position: relative;
-  background-image: url("../images/hero.jpg");
+  background-image: url("./images/hero.jpg");
   background-position: center;
   background-size: cover;
 }
