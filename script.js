@@ -445,6 +445,23 @@ createImagePopUp(galleryImages);
 
 // Animating the equipment section ----
 
+// equipment title
+
+let equipmentTitleGSAP = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#equipment-heading",
+    start: "top 85%",
+    scrub: false,
+    markers: false,
+  },
+});
+
+equipmentTitleGSAP.to("#equipment-heading", {
+  opacity: 1,
+  duration: 1.4,
+  ease: "ease-in-out",
+});
+
 // shortboard
 
 let shortBoardGSAP = gsap.timeline({
@@ -514,6 +531,19 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+// Text reveal animation ---- TODO
+
+// splitting the element
+const aboutUsSplit = new SplitType("#about-us-heading");
+
+gsap.to(".char", {
+  y: 0,
+  // an offset for each element of the character class
+  stagger: 0.05,
+  delay: 0.2,
+  duration: 0.1,
+});
 
 // References
 

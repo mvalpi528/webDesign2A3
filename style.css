@@ -248,6 +248,11 @@ sl-progress-bar {
   color: var(--text-color);
 }
 
+.char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
+}
+
 #about-us-content-container {
   display: flex;
   justify-content: space-around;
@@ -289,6 +294,10 @@ sl-progress-bar {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+
+#equipment-heading {
+  opacity: 0;
 }
 
 .equipment-content-card {
@@ -500,6 +509,11 @@ sl-dialog li {
 
 .spot-type-modal-close-button:hover {
   cursor: pointer;
+}
+
+.video-description {
+  padding-top: 1rem;
+  font-style: italic;
 }
 
 /* --------------------------------------- */
