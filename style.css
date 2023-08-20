@@ -91,7 +91,6 @@ html {
 }
 
 section {
-  border: red 1px solid;
   min-height: 100vh;
   padding-top: 100px;
 }
