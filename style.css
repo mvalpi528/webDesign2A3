@@ -45,26 +45,22 @@ textarea {
 
 @font-face {
   font-family: "Bebas";
-  /* Jumps back to index via ../ */
-  src: url("../fonts/BebasNeue-Regular.ttf");
+  src: url("./fonts/BebasNeue-Regular.ttf");
 }
 
 @font-face {
   font-family: "OTR";
-  /* Jumps back to index via ../ */
-  src: url("../fonts/OTRtypeGX.ttf");
+  src: url("./fonts/OTRtypeGX.ttf");
 }
 
 @font-face {
   font-family: "Generation-Mono";
-  /* Jumps back to index via ../ */
-  src: url("../fonts/Generation-Mono.otf");
+  src: url("./fonts/Generation-Mono.otf");
 }
 
 @font-face {
   font-family: "kabel-black";
-  /* Jumps back to index via ../ */
-  src: url("../fonts/kabel-black.otf");
+  src: url("./fonts/kabel-black.otf");
 }
 
 :root {
@@ -453,15 +449,15 @@ sl-dialog li {
 }
 
 #reef {
-  background-image: url("/images/ocean/reef.jpg");
+  background-image: url("./images/ocean/reef.jpg");
 }
 
 #point {
-  background-image: url("/images/ocean/point.jpg");
+  background-image: url("./images/ocean/point.jpg");
 }
 
 #beachbreak {
-  background-image: url("/images/ocean/beachbreak.jpg");
+  background-image: url("./images/ocean/beachbreak.jpg");
 }
 
 .spot-type-title {

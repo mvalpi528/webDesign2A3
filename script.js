@@ -551,3 +551,5 @@ gsap.to(".char", {
 
 // https://www.youtube.com/watch?v=Hh1ckWJF7_0 - beach modal
 // https://www.youtube.com/watch?v=A3X-SjtGj3k - point modal
+
+// https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/#top-of-site - css reset
