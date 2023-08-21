@@ -497,10 +497,6 @@ sl-dialog li {
   opacity: 1;
 }
 
-/* #reef {
-  background-image: url("./images/ocean/reef.jpg");
-} */
-
 #reef img,
 #point img,
 #beachbreak img {
@@ -508,14 +504,6 @@ sl-dialog li {
   height: 100%;
   width: 100%;
 }
-
-/* #point {
-  background-image: url("./images/ocean/point.jpg");
-}
-
-#beachbreak {
-  background-image: url("./images/ocean/beachbreak.jpg");
-} */
 
 .spot-type-title {
   position: absolute;

@@ -539,14 +539,3 @@ gsap.to(".char", {
   delay: 0.2,
   duration: 0.1,
 });
-
-// References
-
-// Videos
-
-// https://www.youtube.com/watch?v=Hh1ckWJF7_0 - beach modal
-// https://www.youtube.com/watch?v=A3X-SjtGj3k - point modal
-
-// https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/#top-of-site - css reset
-
-// https://getwaves.io/ - svg source
