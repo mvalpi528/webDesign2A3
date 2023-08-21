@@ -532,11 +532,6 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// Text reveal animation ---- TODO
-
-// splitting the element
-const aboutUsSplit = new SplitType("#about-us-heading");
-
 gsap.to(".char", {
   y: 0,
   // an offset for each element of the character class
@@ -553,3 +548,5 @@ gsap.to(".char", {
 // https://www.youtube.com/watch?v=A3X-SjtGj3k - point modal
 
 // https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/#top-of-site - css reset
+
+// https://getwaves.io/ - svg source

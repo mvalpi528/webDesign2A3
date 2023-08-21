@@ -237,6 +237,7 @@ sl-progress-bar {
 
 #about-us {
   text-align: center;
+  position: relative;
 }
 
 #about-us h2 {
@@ -251,7 +252,7 @@ sl-progress-bar {
 #about-us-content-container {
   display: flex;
   justify-content: space-around;
-  border: solid 1px black;
+
   max-width: 1200px;
   padding-top: 50px;
   margin: 0 auto;
@@ -261,7 +262,8 @@ sl-progress-bar {
   height: 50%;
   width: 50%;
   margin: 10px;
-  /* border: solid 1px black; */
+
+  z-index: 2;
 }
 
 #about-us-content-container div p {
@@ -275,6 +277,26 @@ sl-progress-bar {
   max-width: 500px;
 }
 
+/* svg styling and animation */
+.wave {
+  margin-top: -300px;
+  width: 120%;
+  animation: wave linear 15s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* controlling the svg animation */
+@keyframes wave {
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
 /* --------------------------------------- */
 
 /* Equipment */
@@ -691,7 +713,6 @@ sl-dialog li {
     height: 50%;
     width: 80%;
     margin: 0 auto;
-    border: solid 1px black;
   }
 
   #about-us-content-container div p {
