@@ -93,21 +93,19 @@ html {
 section {
   min-height: 100vh;
   padding-top: 100px;
+  position: relative;
 }
 
 h1 {
   font-family: var(--hero-font);
   color: var(--hero-colour);
+  font-size: var(--largest);
 }
 
 h2,
 h3 {
   font-family: var(--heading-font);
   color: var(--text-color);
-}
-
-h1 {
-  font-size: var(--largest);
 }
 
 h2 {
@@ -121,6 +119,36 @@ h3 {
 body {
   background-color: var(--contrast-desaturated);
   font-family: var(--secondary-font);
+}
+
+.fa-solid,
+.fa-arrow-down {
+  font-size: 3rem;
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+}
+
+.fa-arrow-down {
+  animation: arrow 1s ease 0 infinite;
+}
+
+/* for some reason this animation is not working - it is supposed to make the side arrows move up and down */
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.arrow-button:hover {
+  cursor: pointer;
 }
 
 /* --------------------------------------- */
@@ -280,7 +308,7 @@ sl-progress-bar {
 /* svg styling and animation */
 .wave {
   margin-top: -300px;
-  width: 120%;
+  width: 100%;
   animation: wave linear 15s infinite;
   animation-timing-function: ease-in-out;
 }
@@ -320,7 +348,7 @@ sl-progress-bar {
 .equipment-content-card {
   position: relative;
   height: 600px;
-  width: 400px;
+  /* width: 400px; */
   margin: 20px;
   border: solid lightgrey 1px;
   border-radius: 10px;
@@ -469,17 +497,25 @@ sl-dialog li {
   opacity: 1;
 }
 
-#reef {
+/* #reef {
   background-image: url("./images/ocean/reef.jpg");
+} */
+
+#reef img,
+#point img,
+#beachbreak img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
-#point {
+/* #point {
   background-image: url("./images/ocean/point.jpg");
 }
 
 #beachbreak {
   background-image: url("./images/ocean/beachbreak.jpg");
-}
+} */
 
 .spot-type-title {
   position: absolute;
@@ -636,11 +672,21 @@ sl-dialog li {
 
 /* Media Queries */
 
+@media screen and (max-width: 1023px) {
+  :root {
+    --largest: 7rem;
+    --large: 4rem;
+    --medium: 3rem;
+    --small: 1.5rem;
+    --body-text: 0.8rem;
+  }
+}
+
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
   /* font sizes */
   :root {
-    --largest: 5rem;
+    --largest: 7rem;
     --large: 3rem;
     --medium: 2.5rem;
     --small: 1.25rem;
@@ -649,6 +695,13 @@ sl-dialog li {
 
   /* Nav bar responsiveness --------- */
   sl-progress-bar {
+    display: none;
+  }
+
+  #fa-icon-1,
+  #fa-icon-2,
+  #fa-icon-3,
+  #fa-icon-4 {
     display: none;
   }
 
@@ -704,6 +757,10 @@ sl-dialog li {
 
   /* Hero section responsiveness --------- */
 
+  h1 {
+    font-size: 10vw;
+  }
+
   /* About us responsiveness --------- */
   #about-us-content-container {
     flex-direction: column;
@@ -748,12 +805,29 @@ sl-dialog li {
   }
 }
 
-@media screen and (max-width: 1023px) {
-  :root {
-    --largest: 7rem;
-    --large: 4rem;
-    --medium: 3rem;
-    --small: 1.5rem;
-    --body-text: 0.8rem;
+/* making fonts work on ultra small screens */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 20vw;
+  }
+
+  h2 {
+    font-size: 13vw;
+  }
+
+  h3 {
+    font-size: 8vw;
+  }
+
+  .spot-type {
+    height: 500px;
+    width: 100%;
+  }
+
+  #fa-icon-1,
+  #fa-icon-2,
+  #fa-icon-3,
+  #fa-icon-4 {
+    display: none;
   }
 }
